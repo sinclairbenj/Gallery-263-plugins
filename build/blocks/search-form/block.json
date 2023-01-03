@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "g263-plus/search-form",
+  "title": "Search form",
+  "category": "widgets",
+  "description": "Adds a search field",
+  "keywords": [
+    "search",
+    "search form"
+  ],
+  "version": "1",
+  "textdomain": "g263-plus",
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "bgColor": {
+      "type": "string",
+      "default": "#f87171"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#fff"
+    }
+  },
+  "style": "file:./index.css"
+}
