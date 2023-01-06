@@ -5,6 +5,9 @@ function gp_register_blocks() {
         [ 'name' => 'fancy-header' ],
         [ 'name' => 'search-form', 'options' => [
             'render_callback' => 'gp_search_form_render_cb'
+        ]],
+        [ 'name' => 'page-header', 'options' => [
+            'render_callback' => 'gp_page_header_render_cb'
         ]]
     ];
 

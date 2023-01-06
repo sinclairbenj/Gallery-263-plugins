@@ -23,9 +23,13 @@
 define('GP_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 // Includes
+$rootFiles = glob(GP_PLUGIN_DIR . 'includes/*.php');
+$subdirectoryFiles = glob(GP_PLUGIN_DIR . 'includes/**/*.php');
+$allFiles = array_merge($rootFiles, $subdirectoryFiles);
 
-include(GP_PLUGIN_DIR . 'includes/register-blocks.php');
-include(GP_PLUGIN_DIR . 'includes/blocks/search-form.php');
+foreach($allFiles as $filename) {
+    include_once($filename);
+}
 
 // Hooks
 
