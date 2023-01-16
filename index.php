@@ -32,5 +32,10 @@ foreach($allFiles as $filename) {
 }
 
 // Hooks
-
+register_activation_hook(__FILE__, 'gp_activate_plugin');
 add_action('init', 'gp_register_blocks');
+add_action('init', 'gp_recipe_post_type');
+add_action('cuisine_add_form_fields', 'gp_cuisine_add_form_fields');
+add_action('create_cuisine', 'gp_save_cuisine_meta');
+add_action('cuisine_edit_form_fields', 'gp_cuisine_edit_form_fields');
+add_action('edited_cuisine', 'gp_save_cuisine_meta');
